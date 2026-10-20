@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Tabel Frekuensi</title>
+    <!-- Menghubungkan CSS & Font -->
+     <link rel="stylesheet" href="style.css">
+     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+     <!-- pustaka Chart.js untuk menggambar grafik-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+</head>
+<body>
+
+    <!-- Header/Navbar-->
+    <header class ="navbar-wrapper">
+        <div class="navbar">
+            <div class="logo">Albert & Einstein<span>.</span></div>
+            <span class="tagline">Pengolah Data Statistik</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero / Area Input-->
+         <section class="hero-section">
+            <h1>Kalkulator <span> Tabel Frekuensi </span></h1>
+            <p>Masukkan sekumpulan data angka untuk menghitung jangkauan, jumlah kelas, panjang kelas, dan membuat tabel frekuensi secara otomatis</p>
+            
+            <div class="card input-card">
+                <label for="dataInput">Masukkan Data Angka (pisahkan dengan koma atau spasi):</label>
+                <textarea id="dataInput" placeholder="Contoh: 60, 65, 70, 75, 80, 85, 90, 62, 68, 72, 78, 82, 88, 92"></textarea>
+                <button id="btnHitung" class="button" onclick="prosesData()">Hitung Data &rarr;</button>
+            </div>
+         </section> 
+
+         <!-- Hasil Pengolahan Data-->
+          <section id="resultSection" class="result-section hidden">
+            <h2>Ringkasan <span>Statistik</span></h2>
+
+            <!-- Kartu-Kartu Statistik (Grid)-->
+             <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-label">Jumlah Data</span>
+                    <span class="stat-value" id="valN">-</span>
+                </div>
+
+                 <div class="stat-card">
+                    <span class="stat-label">Nilai Min/ Max</span>
+                    <Span class="stat-value" id="valMinMax">-</Span>
+                </div>
+
+                 <div class="stat-card">
+                    <span class="stat-label">Jangkauan (R)</span>
+                    <Span class="stat-value" id="valrange">-</Span>
+                </div>
+                
+                <div class="stat-card">
+                    <span class="stat-label">Jumlah Kelas (k)</span>
+                    <Span class="stat-value" id="valkelas">-</Span>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-label"> Panjang Kelas (p)</span>
+                    <span class="stat-value" id ="valPanjang">-</span>
+                </div>
+             </div>
+
+             <!-- TAbel Hasil-->
+              <div class="card table-card">
+                <h3>Tabel Distribusi Frekuensi</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Interval Kelas</th>
+                            <th>Frekuensi (f)</th>
+                            <th>Frekuensi Relatif (%)</th>
+                            <th>Frekuensi Kumulatif (&le;)</th>
+                            <th>Frekuensi Kumulatif Relatif (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!--Baris tabel akan diisi otomatis oleh JavaScript-->
+                    </tbody>
+                </table>
+              </div>
+              <!--baris grafik-->
+              <div class="charts-grid">
+                <div class="card chart-card">
+                    <h3>Histogram Frekuensi</h3>
+                    <canvas id="histogramChart"></canvas>
+                </div>
+              </div>
+
+              <div class="card chart-card">
+                <h3>Polygon Frekuensi</h3>
+                <canvas id="polygonChart"></canvas>
+              </div>
+          </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
