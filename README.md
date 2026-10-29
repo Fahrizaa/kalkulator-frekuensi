@@ -1,4 +1,4 @@
-## 📊 Kalkulator Tabel Frekuensi & Pengolah Data Statistik
+## Kalkulator Tabel Frekuensi & Pengolah Data Statistik
 
 **Kalkulator Tabel Frekuensi** adalah aplikasi berbasis web interaktif yang dirancang untuk memproses sekumpulan data angka mentah menjadi tabel distribusi frekuensi lengkap, ukuran pemusatan data, serta visualisasi grafik statistik secara otomatis.
 
