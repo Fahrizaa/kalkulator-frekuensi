@@ -65,7 +65,43 @@
                 </div>
              </div>
 
-             <!-- TAbel Hasil-->
+             <!--Kartu Ringkasan ukuran pemusatan (Mean, Modus, Ukur, dan Harmonik)-->
+             <div class="card summary-card">
+                <h3>Ringkasan Ukuran Pemusatan</h3>
+                <table class="summary-table">
+                    <thead>
+                        <tr>
+                            <th>Ukuran Statistik</th>
+                            <th>Data tunggal</th>
+                            <th>Data Kelompok</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Rata-Rata Hitung (Mean)</strong></td>
+                            <td id="meanTunggal">-</td>
+                            <td id="meanKelompok">-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Modus</strong></td>
+                            <td id="modusTunggal">-</td>
+                            <td id="modusKelompok">-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Rata-rata Ukur (Geometric Mean)</strong></td>
+                            <td id="UkurTunggal">-</td>
+                            <td id="UkurKelompok">-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Rata-rata Harmonik (Harmonic Mean)</strong></td>
+                            <td id="HarmonikTunggal">-</td>
+                            <td id="HarmonikKelompok">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+             </div>
+
+             <!-- Tabel Hasil-->
               <div class="card table-card">
                 <h3>Tabel Distribusi Frekuensi</h3>
                 <table>
@@ -76,6 +112,7 @@
                             <th>Frekuensi (f)</th>
                             <th>Frekuensi Relatif (%)</th>
                             <th>Frekuensi Kumulatif (&le;)</th>
+                            <th>Frekuensi Kumulatif (&ge;)</th>
                             <th>Frekuensi Kumulatif Relatif (%)</th>
                         </tr>
                     </thead>
@@ -85,19 +122,32 @@
                 </table>
               </div>
               <!--baris grafik-->
-              <div class="charts-grid">
-                <div class="card chart-card">
+                <!--histogram-->
+                <div class="charts-grid">
+                    <div class="card chart-card">
                     <h3>Histogram Frekuensi</h3>
                     <canvas id="histogramChart"></canvas>
                 </div>
 
+                <!--poligon-->
                 <div class="card chart-card">
                     <h3>Polygon Frekuensi</h3>
                     <canvas id="polygonChart"></canvas>
                 </div>
               </div>
+
+              <!--ogive-->
+              <div class="card chart-card" style="margin-top: 24px;">
+                  <h3>Ogive Frekuensi</h3>
+                  <canvas id="ogiveChart"></canvas>
+              </div>
+
           </section>
     </main>
+
+    <footer class="site-footer">
+        <p>© 2026 <strong>Fahrizaa</strong> · Pengolah Data Statistik</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>

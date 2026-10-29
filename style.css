@@ -178,6 +178,29 @@ button:hover {
   margin-bottom: 24px;
 }
 
+.summary-card {
+  margin: 24px 0;
+}
+
+.summary-card h3 {
+  margin-bottom: 12px;
+}
+
+.summary-table {
+  min-width: 0;
+  table-layout: fixed;
+}
+
+.summary-table th:first-child,
+.summary-table td:first-child {
+  width: 44%;
+}
+
+.summary-table th:not(:first-child),
+.summary-table td:not(:first-child) {
+  width: 28%;
+}
+
 .stat-card {
   background-color: var(--card-tint);
   padding: 18px;
@@ -247,6 +270,19 @@ tr:hover {
   color: var(--text-dark);
 }
 
+.site-footer {
+  margin-top: 40px;
+  padding: 20px 16px;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.site-footer strong {
+  color: var(--text-dark);
+}
+
 /*media query untuk tampilan mobile */
 @media (max-width: 850px) {
   .charts-grid {
@@ -296,4 +332,11 @@ tr:hover {
     text-align: center;
   }
 
+  .summary-card {
+    overflow-x: auto;
+  }
+
+  .summary-table {
+    min-width: 560px;
+  }
 }
